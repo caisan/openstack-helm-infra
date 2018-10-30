@@ -43,8 +43,8 @@ function ansible_install {
       redhat-rpm-config \
       gcc \
       curl
-    sudo curl -L -o /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
-    sudo chmod +x /usr/bin/jq
+    #sudo curl -L -o /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
+    #sudo chmod +x /usr/bin/jq
   elif [ "x$ID" == "xfedora" ]; then
     sudo dnf install -y \
       python-devel \
