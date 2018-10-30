@@ -20,9 +20,11 @@
   gather_facts: False
   become: yes
   roles:
-    - deploy-python
+    #- deploy-python
+    - build-helm-packages
   tags:
-    - deploy-python
+    #- deploy-python
+    - build-helm-packages
 
 - hosts: all
   vars_files:
@@ -33,11 +35,11 @@
   become: yes
   roles:
     - setup-firewall
-    - deploy-python-pip
-    - deploy-docker
+    #- deploy-python-pip
+    #- deploy-docker
     - deploy-jq
   tags:
     - setup-firewall
-    - deploy-python-pip
-    - deploy-docker
+    #- deploy-python-pip
+    #- deploy-docker
     - deploy-jq
